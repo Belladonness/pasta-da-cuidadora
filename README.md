@@ -4,22 +4,19 @@ Página de apresentação do kit digital Pasta da Cuidadora, com oferta de R$ 27
 
 ## Arquivos
 
-- `index.html`: página completa, sem dependências externas ou etapa de build.
+- `index.html`: página completa, sem etapa de build.
+- `logo-pasta-da-cuidadora-simbolo.svg`: símbolo usado no cabeçalho, rodapé e ícone da aba.
+- `logo-pasta-da-cuidadora.svg`: versão horizontal da marca.
 - `netlify.toml`: diretório de publicação configurado como `.`.
 
-## Desenvolvimento
+## Checkout e entrega
 
-Abra `index.html` em um navegador. HTML, estilos, ícones e scripts estão no mesmo arquivo.
-
-## Checkout
-
-O checkout ainda não está configurado. Em `index.html`, preencha `CHECKOUT_URL` com o link HTTPS real gerado na Cakto. Configure a entrega dos arquivos do produto antes de liberar as vendas.
+Pagamento e entrega serão feitos pela Hotmart. O checkout ainda não está configurado. Depois de cadastrar o produto e os arquivos, preencha `CHECKOUT_URL` no `index.html` com o link HTTPS real da Hotmart. Até lá, os botões de compra exibem um aviso de vendas indisponíveis.
 
 ## Hospedagem
 
-A configuração incluída permite importar o repositório na Netlify, sem comando de build, usando o diretório `.`. A mesma pasta pode ser publicada em outra hospedagem estática.
+O repositório publica automaticamente em https://pasta-da-cuidadora.netlify.app/ pela Netlify.
 
 ## Conteúdo
 
-As prévias das folhas são ilustrativas. O repositório contém apenas a página de vendas, não os arquivos do kit ou dados de clientes.
-
+As prévias das folhas são ilustrativas. O repositório contém apenas a página de vendas, não os 25 documentos, bônus ou dados de clientes.
