@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo Pasta da Cuidadora</title>
+  <desc id="desc">Pasta com folhas e um coração, em verde profundo, creme e terracota.</desc>
+  <rect width="512" height="512" rx="92" fill="#244D43"/>
+  <path d="M123 391c72 72 190 102 279 52" fill="none" stroke="#365F53" stroke-width="31" stroke-linecap="round" opacity=".65"/>
+  <rect x="177" y="119" width="224" height="266" rx="19" fill="#F7F5EC" transform="rotate(-8 177 119)"/>
+  <path d="M191 183h164M191 224h148M191 265h119" fill="none" stroke="#AABAAA" stroke-width="12" stroke-linecap="round" transform="rotate(-8 191 183)"/>
+  <path d="M87 218a26 26 0 0 1 26-26h91l31 32h168a26 26 0 0 1 26 26v164a29 29 0 0 1-29 29H116a29 29 0 0 1-29-29Z" fill="#E7ECDD"/>
+  <path d="M87 257h342v157a29 29 0 0 1-29 29H116a29 29 0 0 1-29-29Z" fill="#F6F4E9"/>
+  <path d="M258 371c-12-12-57-43-57-72 0-17 14-29 31-29 12 0 21 5 26 15 5-10 14-15 26-15 17 0 31 12 31 29 0 29-45 60-57 72Z" fill="#C67556"/>
+</svg>

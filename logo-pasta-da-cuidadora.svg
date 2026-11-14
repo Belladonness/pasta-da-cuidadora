@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 350" role="img" aria-labelledby="title desc">
+  <title id="title">Pasta da Cuidadora</title>
+  <desc id="desc">Símbolo de uma pasta com folhas e um coração, seguido pelo nome Pasta da Cuidadora e a frase Seu cuidado, bem organizado.</desc>
+  <defs>
+    <g id="marca">
+      <rect width="300" height="300" rx="56" fill="#244D43"/>
+      <path d="M73 232c42 42 111 60 163 31" fill="none" stroke="#365F53" stroke-width="18" stroke-linecap="round" opacity=".65"/>
+      <rect x="104" y="69" width="131" height="156" rx="11" fill="#F7F5EC" transform="rotate(-8 104 69)"/>
+      <path d="M112 108h96M112 132h87M112 156h70" fill="none" stroke="#AABAAA" stroke-width="7" stroke-linecap="round" transform="rotate(-8 112 108)"/>
+      <path d="M51 128a15 15 0 0 1 15-15h53l18 19h98a15 15 0 0 1 15 15v96a17 17 0 0 1-17 17H68a17 17 0 0 1-17-17Z" fill="#E7ECDD"/>
+      <path d="M51 151h199v92a17 17 0 0 1-17 17H68a17 17 0 0 1-17-17Z" fill="#F6F4E9"/>
+      <path d="M150 218c-7-7-33-25-33-42 0-10 8-17 18-17 7 0 12 3 15 9 3-6 8-9 15-9 10 0 18 7 18 17 0 17-26 35-33 42Z" fill="#C67556"/>
+    </g>
+  </defs>
+  <use href="#marca" x="22" y="25"/>
+  <text x="365" y="137" fill="#244D43" font-family="Georgia,'Times New Roman',serif" font-size="83" letter-spacing="-2">Pasta da</text>
+  <text x="360" y="247" fill="#244D43" font-family="Georgia,'Times New Roman',serif" font-size="119" letter-spacing="-4">Cuidadora</text>
+  <path d="M366 273h110" stroke="#C67556" stroke-width="5" stroke-linecap="round"/>
+  <text x="504" y="282" fill="#58766A" font-family="Arial,Helvetica,sans-serif" font-size="23" letter-spacing="3.2">SEU CUIDADO, BEM ORGANIZADO.</text>
+</svg>
