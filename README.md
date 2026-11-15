@@ -7,16 +7,27 @@ Página de apresentação do kit digital Pasta da Cuidadora, com oferta de R$ 27
 - `index.html`: página completa, sem etapa de build.
 - `logo-pasta-da-cuidadora-simbolo.svg`: símbolo usado no cabeçalho, rodapé e ícone da aba.
 - `logo-pasta-da-cuidadora.svg`: versão horizontal da marca.
+- `compartilhamento.png`: imagem 1200 × 630 usada no preview de links.
+- `tracking.js`: Pixel da Meta acionado somente após consentimento.
+- `privacidade.html` e `contato.html`: informação de privacidade e canal público de atendimento.
 - `netlify.toml`: diretório de publicação configurado como `.`.
 
-## Checkout e entrega
+## Desenvolvimento
 
-Pagamento e entrega serão feitos pela Hotmart. O checkout ainda não está configurado. Depois de cadastrar o produto e os arquivos, preencha `CHECKOUT_URL` no `index.html` com o link HTTPS real da Hotmart. Até lá, os botões de compra exibem um aviso de vendas indisponíveis.
+Abra `index.html` em um navegador, mantendo os demais arquivos desta pasta ao lado dele.
+
+## Checkout
+
+O checkout ainda não está configurado. Em `index.html`, preencha `CHECKOUT_URL` com o link HTTPS real gerado na Hotmart. Configure a entrega dos arquivos do produto na Hotmart antes de liberar as vendas.
+
+## Rastreamento e contato
+
+O site usa o Pixel da Meta `1692957962500036` somente após consentimento, com eventos `PageView` e `ViewContent`. O checkout e a compra devem ser configurados no produto da Hotmart com o mesmo Pixel. A Google Tag ainda aguarda seu identificador. O contato público é `contato.pastadacuidadora@gmail.com`.
 
 ## Hospedagem
 
-O repositório publica automaticamente em https://pasta-da-cuidadora.netlify.app/ pela Netlify.
+A configuração incluída permite importar o repositório na Netlify, sem comando de build, usando o diretório `.`. A mesma pasta pode ser publicada em outra hospedagem estática.
 
 ## Conteúdo
 
-As prévias das folhas são ilustrativas. O repositório contém apenas a página de vendas, não os 25 documentos, bônus ou dados de clientes.
+As prévias das folhas são ilustrativas. O repositório contém apenas a página de vendas, não os arquivos do kit ou dados de clientes.
