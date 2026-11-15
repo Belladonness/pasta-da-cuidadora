@@ -40,6 +40,13 @@
   accept.addEventListener('click', () => { saveChoice('accepted'); loadPixel(); });
   reject.addEventListener('click', () => { saveChoice('rejected'); if (pixelLoaded) location.reload(); });
   settings.addEventListener('click', () => { panel.hidden = false; panel.querySelector('button')?.focus(); });
+  document.querySelectorAll('[data-checkout]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.dataset.checkoutReady === 'true' && choice === 'accepted' && typeof window.fbq === 'function') {
+        window.fbq('track', 'InitiateCheckout', {content_name:'Pasta da Cuidadora',content_type:'product',value:27,currency:'BRL'});
+      }
+    });
+  });
   if (location.hash === '#preferencias-de-privacidade') panel.hidden = false;
 
 })();

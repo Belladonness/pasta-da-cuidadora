@@ -128,13 +128,14 @@
     </div></section>
 
     <section class="section" id="oferta"><div class="wrap offer-grid">
-      <div class="offer-intro"><span class="eyebrow">Um pequeno passo para se organizar</span><h2>Tudo pronto para<br>o seu próximo plantão.</h2><p>Hoje você leva o kit e os três bônus por R$ 27. Pagamento único, acesso imediato após a confirmação do pagamento e sem mensalidade.</p><p>Dá pouco mais de R$ 1 por documento.</p><div class="guarantee"><div class="seal" aria-hidden="true"><strong>7</strong><span>DIAS</span></div><div><h3>Abra. Imprima. Experimente.</h3><p>Você tem 7 dias. Use no plantão. Se não servir para você, peça o reembolso pela plataforma e receba o valor de volta.</p></div></div></div>
+      <div class="offer-intro"><span class="eyebrow">Um pequeno passo para se organizar</span><h2>Tudo pronto para<br>o seu próximo plantão.</h2><p>Hoje você leva o kit e os três bônus por R$ 27. Pagamento único, acesso imediato após a confirmação do pagamento, acesso vitalício aos arquivos e sem mensalidade.</p><p>Dá pouco mais de R$ 1 por documento.</p><div class="guarantee"><div class="seal" aria-hidden="true"><strong>7</strong><span>DIAS</span></div><div><h3>Abra. Imprima. Experimente.</h3><p>Você tem 7 dias. Use no plantão. Se não servir para você, peça o reembolso pela plataforma e receba o valor de volta.</p></div></div></div>
       <div class="price-box"><div class="price-top">Pasta da Cuidadora + 3 bônus</div><div class="price-body"><dl class="value-list"><div><dt>Pasta da Cuidadora</dt><dd>R$ 97</dd></div><div><dt>Mensagens Prontas</dt><dd>R$ 27</dd></div><div><dt>Guia da Primeira Visita</dt><dd>R$ 19</dd></div><div><dt>Passo a passo para se formalizar</dt><dd>R$ 19</dd></div><div class="total"><dt>Soma dos valores apresentados</dt><dd>R$ 162</dd></div></dl><p class="price-prompt">Você leva tudo por</p><div class="price"><small>R$</small>27<span style="font-size:39px;letter-spacing:-2px">,00</span></div><p class="price-note">Pagamento único. Sem mensalidade.</p><a class="btn" data-checkout href="#checkout-pendente">Quero minha pasta por R$ 27 <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><div class="purchase-foot"><svg aria-hidden="true"><use href="#i-shield"/></svg>7 dias para pedir seu dinheiro de volta</div><p class="unavailable-note" data-checkout-note>Compras ainda não liberadas.</p></div></div>
     </div></section>
 
     <section class="section faq" id="duvidas"><div class="wrap faq-grid"><div class="faq-intro"><span class="eyebrow">Antes de decidir</span><h2>Talvez você<br>esteja pensando…</h2><p>Respostas diretas às dúvidas sobre o kit.</p></div><div>
       <details><summary>Preciso ter curso de cuidadora?</summary><p>Não. Os documentos servem para quem já trabalha na área, com ou sem curso.</p></details>
       <details><summary>Como recebo?</summary><p>Após a confirmação do pagamento, a Hotmart envia por e-mail as instruções de acesso ao kit.</p></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><p>O acesso aos arquivos do kit é vitalício. Você pode baixar e guardar os documentos para usar sempre que precisar, sem mensalidade.</p></details>
       <details><summary>Preciso de computador?</summary><p>Não. Dá para baixar e editar pelo celular e imprimir em qualquer papelaria.</p></details>
       <details><summary>O kit tem contrato?</summary><p>Não. Tem o Combinado de Atendimento, uma folha para você e a família registrarem dias, horários, valor e avisos. Ele não substitui contrato feito por advogado nem orientação jurídica. Se a sua situação pedir um profissional, o kit traz a lista de perguntas para você levar.</p></details>
       <details><summary>Os documentos ensinam a dar remédio?</summary><p>Não. Eles servem para registrar os horários que o médico receitou. Orientação de saúde é do profissional de saúde.</p></details>
@@ -179,10 +180,21 @@
       });
     });
     let validCheckout = false;
-    try { validCheckout = Boolean(CHECKOUT_URL) && new URL(CHECKOUT_URL).protocol === 'https:'; } catch (_) {}
+    let checkoutHref = '';
+    try {
+      const checkout = new URL(CHECKOUT_URL);
+      validCheckout = Boolean(CHECKOUT_URL) && checkout.protocol === 'https:';
+      if (validCheckout) {
+        const campaign = new URLSearchParams(location.search);
+        campaign.forEach((value, key) => {
+          if (/^(utm_[a-z0-9_]+|src)$/i.test(key)) checkout.searchParams.set(key, value);
+        });
+        checkoutHref = checkout.toString();
+      }
+    } catch (_) {}
     const checkoutDialog = document.getElementById('checkout-pendente');
     document.querySelectorAll('[data-checkout]').forEach(link => {
-      if (validCheckout) { link.href = CHECKOUT_URL; }
+      if (validCheckout) { link.href = checkoutHref; link.dataset.checkoutReady = 'true'; }
       else { link.addEventListener('click', event => { event.preventDefault(); checkoutDialog.showModal(); }); }
     });
     if (validCheckout) document.querySelectorAll('[data-checkout-note]').forEach(note => { note.hidden = true; });
@@ -191,7 +203,8 @@
       const box = checkoutDialog.getBoundingClientRect();
       if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) checkoutDialog.close();
     });
-  </script>  <script src="tracking.js" defer></script>
-
+  </script>
+  <script src="tracking.js" defer></script>
 </body>
 </html>
+
