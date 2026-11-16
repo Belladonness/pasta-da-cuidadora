@@ -23,7 +23,7 @@ Os botões levam ao checkout da Hotmart `https://pay.hotmart.com/T108491592B`, c
 
 ## Rastreamento e contato
 
-O site usa o Pixel da Meta `1692957962500036` somente após consentimento, com eventos `PageView`, `ViewContent` e `InitiateCheckout` no clique de compra quando o checkout estiver ativo. Os links de compra levam os parâmetros `utm_*` e `src` da página ao checkout. Configure o evento `Purchase` no produto da Hotmart com o mesmo Pixel. A Google Tag ainda aguarda seu identificador. O contato público é `contato.pastadacuidadora@gmail.com`.
+O site usa o Pixel empresarial da Meta `2184547628804231` somente após consentimento, com eventos `PageView`, `ViewContent` e `InitiateCheckout` no clique de compra quando o checkout estiver ativo. Os links de compra levam os parâmetros `utm_*` e `src` da página ao checkout. Configure o evento `Purchase` no produto da Hotmart com o mesmo Pixel. A Google Tag ainda aguarda seu identificador. O contato público é `contato.pastadacuidadora@gmail.com`. O token da API de Conversões deve ficar apenas na Meta e na Hotmart, nunca neste repositório ou nos arquivos públicos.
 
 ## Hospedagem
 
