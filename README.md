@@ -8,7 +8,7 @@ Página de apresentação do kit digital Pasta da Cuidadora, com oferta de R$ 27
 - `logo-pasta-da-cuidadora-simbolo.svg`: símbolo usado no cabeçalho, rodapé e ícone da aba.
 - `logo-pasta-da-cuidadora.svg`: versão horizontal da marca.
 - `compartilhamento.png`: imagem 1200 × 630 usada no preview de links.
-- `tracking.js`: Pixel da Meta acionado somente após consentimento.
+- `tracking.js`: cópia do código do Pixel incorporado ao `index.html`, acionado somente após consentimento.
 - `privacidade/index.html` e `contato/index.html`: páginas públicas de privacidade e atendimento na Cloudflare.
 - `privacidade.html` e `contato.html`: cópias de compatibilidade da versão anterior.
 - `netlify.toml`: encaminha o endereço antigo da Netlify para a Cloudflare.
