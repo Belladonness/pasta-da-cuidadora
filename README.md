@@ -19,7 +19,7 @@ Abra `index.html` em um navegador, mantendo os demais arquivos desta pasta ao la
 
 ## Checkout
 
-O checkout ainda não está configurado. Em `index.html`, preencha `CHECKOUT_URL` com o link HTTPS real gerado na Hotmart. Configure a entrega dos arquivos do produto na Hotmart antes de liberar as vendas.
+Os botões levam ao checkout da Hotmart `https://pay.hotmart.com/T108491592B`, conferido com preço à vista de R$ 27. Confirme a entrega dos arquivos do produto na Hotmart.
 
 ## Rastreamento e contato
 
